@@ -34,6 +34,8 @@ Proceed? >> yes
     Agree to license agreement >> yes
     
     Directory to install >> /work/rc/s.chakravarty
+    
+    Do you wish the installer to initialize Miniconda2 by running conda init? [yes|no] >>> yes
     ```
     > :warning: **Note**: Make sure to deactivate any previously activated conda environments with _conda deactivate_
 
