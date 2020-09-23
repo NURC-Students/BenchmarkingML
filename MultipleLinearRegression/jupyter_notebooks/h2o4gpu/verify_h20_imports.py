@@ -5,3 +5,5 @@ import matplotlib
 from sklearn import datasets, linear_model
 import matplotlib.pyplot as plt
 import numpy as np
+
+print("h2o4gpu, sklearn, matplotlib, numpy imports successful!")
