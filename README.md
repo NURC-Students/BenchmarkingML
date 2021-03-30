@@ -1,56 +1,66 @@
-# Welcome to BenchmarkingML
-![BenchmarkingML](/images/openmp.png)
+# **Benchmark-daal4py**
+
+
+## **Fast-Scalable-and-Easy-Machine-Learning-With-DAAL4PY**
+
+
+# **Guide to use the environment and Code**
+
+## **Steps to setup environment to use Daal4py**
+
+1. We have a environment.yml file locate it.
+
+2. Go to anaconda or miniconda installed on the cluster and create the virtual environment.
+
+3. While creating the environment use yml file provided
+
+> 3.a. Create the environment from the environment.yml file:
+
+```conda env create -f environment.yml```
+
+> 3.b. Activate the new environment: 
+
+```conda activate myenv```
+
+> 3.c. Verify that the new environment was installed correctly:
+
+```conda env list```
+
+
+## **Steps to run the code**
+
+1. Once the environment is set up it will allow you to run Daal4py
+2. Navigate to the directory containing main.py file
+3. There few datasets in the data folder and any other tabular data can be added
+4. To run use the command 
+
+```python main.py```
+
+
+### **Custom logger**
+
+This helps to track all the things happening in the entire script and log them to track any errors while debugging.
+
+### **Latency**
+
+This is a dictionary used to track all the time taken by different functions in the script and will be saved as a json file for every run.
+
+### **Metrics**
+
+This is the dictionary to save all the metrics of the trained model and will be saved as a json file for every run.
+
+### **Create directory**
+
+WE create a new temporary directory for every run where our results for that particular run will be saved.
+
  
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+Serial script and parallel script contains the following Algorithms
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+1. Linear regression
+2. Ridge Regression 
+3. PCA
+4. SVD
+5. Naive Bayes
+6. K-Means
 
-## Algorithm
-1. Multiple Linear Regression
-
-### IDE 
-
-* BenchmarkingML Code built and run using Visual Studio Code 
-
-### Prerequisites and Running on Discovery Cluster
-
-
-Proceed? >> yes
-
-
-1. Download the latest release of Miniconda
-    ```sh
-    $ wget https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh
-    ```
-
-2. Change the permissions of the installation script
-    ```sh
-    $ chmod +x Miniconda2-latest-Linux-x86_64.sh
-    ```
-
-3. Run the installation script to install Miniconda 2 in your chose destination _(eg. /work/rc/s.chakravarty)_
-    ```sh
-    $ ./Miniconda2-latest-Linux-x86_64.sh
-    
-    Agree to license agreement >> yes
-    
-    Directory to install >> /work/rc/s.chakravarty
-    
-    Do you wish the installer to initialize Miniconda2 by running conda init? [yes|no] >>> yes
-    ```
-    > :warning: **Note**: Make sure to deactivate any previously activated conda environments with _conda deactivate_
-
-4. Change into the binary folder of your conda installation
-    ```sh
-    $ cd /work/rc/s.chakravarty/bin
-    ```
-
-5. Activate your base miniconda environment
-    ```sh
-    $ source activate
-    ```
-
-6. Update all your conda packages
-    ```sh
-    $ conda update conda    
-    ```
+These scripts are all commented on for easy understanding.
